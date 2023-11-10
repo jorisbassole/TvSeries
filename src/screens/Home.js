@@ -13,6 +13,8 @@ const API_KEY = "2677656fd7468877a093eaa18efd0f94"
 
   const dispatch = useDispatch();
   const tvSeries = useSelector((state) => state.tvSeries);
+
+  
   const [localFavorites, setLocalFavorites] = useState([]);
   const [searchText, setSearchText] = useState('');
 
@@ -55,7 +57,7 @@ const API_KEY = "2677656fd7468877a093eaa18efd0f94"
     navigation.navigate('Favoris');
   };
 
-  const renderItem = ({ item }) => (
+  const TvSerieItems = ({ item }) => (
     <SeriesItem
       series={item}
       onPressDetails={() => navigation.navigate('Details', { seriesId: item.id })}
@@ -83,7 +85,7 @@ const API_KEY = "2677656fd7468877a093eaa18efd0f94"
         data={tvSeries.value?.data?.filter((series) =>
           series.name?.toLowerCase().includes(searchText.toLowerCase())
         )}
-        renderItem={renderItem}
+        renderItem={TvSerieItems}
         keyExtractor={(item) => item.id.toString()}
       />
 
