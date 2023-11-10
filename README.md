@@ -8,7 +8,7 @@ Les utilisateurs peuvent également ajouter et supprimer des séries TV dans leu
 
 1. **Cloner le Répertoire:**
 
-    git clone https://github.com/jorisbassole/Series_Native.git
+    git clone: https://github.com/jorisbassole/TvSeries.git
 
 2. **Installer les Dépendances:**
 
